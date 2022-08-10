@@ -1,11 +1,5 @@
 def containsDuplicate(nums) -> bool:
-    result = False
-    while result != True and len(nums) > 1:
-        for x in nums[1:]:
-            if nums[0] == x:
-                result = True
-        nums = nums[1:]
-    return result
+    return len(nums) != len(set(nums))
 
 print(containsDuplicate([1,2,3,1]))
 print(containsDuplicate([1,2,3,4]))
